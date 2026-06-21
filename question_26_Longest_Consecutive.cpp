@@ -7,25 +7,29 @@ Input: nums = [100,4,200,1,3,2]
 Output: 4
 */
 
-//sol
+// sol
 
 #include <iostream>
 #include <vector>
 #include <unordered_set>
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-    int longestConsecutive(vector<int>& nums) {
+    int longestConsecutive(vector<int> &nums)
+    {
         int ans = 0;
         unordered_set<int> seen(nums.begin(), nums.end());
 
-        for (int num : seen) {
+        for (int num : seen)
+        {
             if (seen.find(num - 1) != seen.end())
                 continue;
 
             int length = 1;
-            while (seen.find(num + 1) != seen.end()) {
+            while (seen.find(num + 1) != seen.end())
+            {
                 num++;
                 length++;
             }
@@ -36,8 +40,6 @@ public:
         return ans;
     }
 };
-
-
 
 // #include <iostream>
 // #include <vector>
@@ -63,3 +65,4 @@ public:
 //     return ans;
 //   }
 // };
+
