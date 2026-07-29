@@ -116,7 +116,6 @@ private:
             if (res >= MAX)
                 return MAX;
         }
-
         return (int)res;
     }
 };
